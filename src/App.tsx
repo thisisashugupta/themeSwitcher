@@ -6,6 +6,7 @@ import Card from './components/Card';
 
 export default function App() {
   const [themeMode, setThemeMode] = useState("light");
+  // these functions defined here will be replaced there (in themeContext)
   const darkTheme = () => {
     setThemeMode("dark");
   };
@@ -13,6 +14,7 @@ export default function App() {
     setThemeMode("light");
   };
 
+  // changes the class in html as soon as the themeMode state is changed
   useEffect(
     () => {
       document.querySelector('html')?.classList.remove("dark", "light");
